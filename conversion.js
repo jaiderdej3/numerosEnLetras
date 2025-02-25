@@ -103,7 +103,7 @@ const ConversionModule = (function () {
         let monedaTexto = (parteEntera === 1) ? monedaSingular : monedaPlural;
         let centavosTexto = parteDecimal > 0 ? ` con ${numeroALetras(parteDecimal, false, true)} centavos` : "";
 
-        return `${capitalizar(textoNumero)} ${monedaTexto}${centavosTexto} ($${new Intl.NumberFormat("es-CO", { minimumFractionDigits: 2 }).format(numero)}) M/L.`;
+        return `${capitalizar(textoNumero)} ${monedaTexto}${centavosTexto} ($ ${new Intl.NumberFormat("es-CO", { minimumFractionDigits: 2 }).format(numero)}) M/L.`;
     }
 
     return {
