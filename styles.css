@@ -1,0 +1,94 @@
+/* Fuentes y fondo general */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner h2 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Tarjetas y secciones */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+/* Botones */
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el Historial */
+#historialList {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+#historialList li {
+    list-style: none;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+#historialList li:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+}
+
+/* Estilos para el buscador de FAQ */
+#faqSearch {
+    margin-bottom: 20px;
+}
