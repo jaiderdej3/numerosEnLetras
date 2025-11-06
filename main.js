@@ -49,9 +49,14 @@ function procesarConversion() {
 }
 
 function copiarResultado() {
-    const resultado = document.getElementById("resultado").innerText;
+    /*const resultado = document.getElementById("resultado").innerText;
     if (!resultado) return;
     navigator.clipboard.writeText(resultado)
         .then(() => alert("Resultado copiado al portapapeles"))
-        .catch(err => alert("Error al copiar: " + err));
+        .catch(err => alert("Error al copiar: " + err));*/
+    const resultado = document.getElementById("resultado").innerText;
+    if (!resultado) return;
+    navigator.clipboard.writeText(resultado)
+        .then(() => mostrarToast("✓ Resultado copiado"))
+        .catch(err => mostrarToast("✗ Error al copiar"));
 }
