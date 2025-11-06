@@ -55,8 +55,36 @@ function copiarResultado() {
         .then(() => alert("Resultado copiado al portapapeles"))
         .catch(err => alert("Error al copiar: " + err));*/
     const resultado = document.getElementById("resultado").innerText;
-    if (!resultado) return;
+    const btn = document.getElementById("btnCopiar");
+    const textoOriginal = btn.innerText;
+    
+    if (!resultado) {
+        btn.innerText = "⚠️ Sin resultado";
+        btn.classList.add("btn-warning");
+        setTimeout(() => {
+            btn.innerText = textoOriginal;
+            btn.classList.remove("btn-warning");
+        }, 2000);
+        return;
+    }
+    
     navigator.clipboard.writeText(resultado)
-        .then(() => mostrarToast("✓ Resultado copiado"))
-        .catch(err => mostrarToast("✗ Error al copiar"));
+        .then(() => {
+            btn.innerText = "✓ Copiado!";
+            btn.classList.remove("btn-primary");
+            btn.classList.add("btn-success");
+            setTimeout(() => {
+                btn.innerText = textoOriginal;
+                btn.classList.remove("btn-success");
+                btn.classList.add("btn-primary");
+            }, 2000);
+        })
+        .catch(err => {
+            btn.innerText = "✗ Error";
+            btn.classList.add("btn-danger");
+            setTimeout(() => {
+                btn.innerText = textoOriginal;
+                btn.classList.remove("btn-danger");
+            }, 2000);
+        });
 }
